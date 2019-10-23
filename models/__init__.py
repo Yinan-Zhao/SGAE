@@ -23,21 +23,21 @@ from .AttModel import *
 #from .AttModel_mem3 import *
 from .AttModel_mem4 import *
 #from .AttModel_mem5 import *
-from .SgModel import *
-from .AttModel_gfc import *
+#from .SgModel import *
+#from .AttModel_gfc import *
 from .AttModel_mem4_gfc import *
-from .AttModel_mem5_gfc import *
-from .AttModel_mem4_new import *
-from .AttModel_mem5_new import *
-from .AttModel_rs import *
-from .AttModel_rs2 import *
-from .AttModel_rs3 import *
-from .AttModel_rs3_st import *
-from .AttModel_rs3_mem import *
-from .AttModel_rs3_mem2 import *
-from .AttModel_rs4 import *
-from .AttModel_rs5 import *
-from .AttModel_rs6 import *
+#from .AttModel_mem5_gfc import *
+#from .AttModel_mem4_new import *
+#from .AttModel_mem5_new import *
+#from .AttModel_rs import *
+#from .AttModel_rs2 import *
+#from .AttModel_rs3 import *
+#from .AttModel_rs3_st import *
+#from .AttModel_rs3_mem import *
+#from .AttModel_rs3_mem2 import *
+#from .AttModel_rs4 import *
+#from .AttModel_rs5 import *
+#from .AttModel_rs6 import *
 
 def setup(opt):
     
