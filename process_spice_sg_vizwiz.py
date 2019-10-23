@@ -7,12 +7,12 @@ root_path = '/home/yz9244/SGAE/'
 #root_path = '/home/yangsheng/project/self-critical.pytorch/'
 train_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_train.json'
 val_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_val.json'
-val_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_test.json'
+test_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_test.json'
 spice_sg_folder = root_path + 'data/vizwiz_spice_sg2/'
 spice_sg_dict_raw_path = root_path + 'data/vizwiz_spice_sg_dict_raw2.npz'
 spice_sg_dict_path = root_path + 'data/vizwiz_spice_sg_dict2.npz'
 
-dict_info = json.load(open(root_path+'data/cocobu2.json'))
+dict_info = json.load(open(root_path+'data/vizwiztalk.json'))
 ix_to_word = dict_info['ix_to_word']
 ix_max = 0
 N_save = 10
@@ -26,7 +26,9 @@ dict_index = ix_max+1
 
 train_sg = json.load(open(train_sg_path))
 val_sg = json.load(open(val_sg_path))
+test_sg = json.load(open(test_sg_path))
 train_sg.update(val_sg)
+train_sg.update(test_sg)
 all_sg = train_sg
 
 img_ids = all_sg.keys()
