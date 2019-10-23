@@ -13,6 +13,9 @@ spice_sg_folder = root_path + 'data/vizwiz_spice_sg2/'
 spice_sg_dict_raw_path = root_path + 'data/vizwiz_spice_sg_dict_raw2.npz'
 spice_sg_dict_path = root_path + 'data/vizwiz_spice_sg_dict2.npz'
 
+if not os.path.isdir(spice_sg_folder):
+	os.mkdir(spice_sg_folder)
+
 dict_info = json.load(open(root_path+'data/vizwiztalk.json'))
 ix_to_word = dict_info['ix_to_word']
 ix_max = 0
