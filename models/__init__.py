@@ -14,15 +14,15 @@ from .FCModel import FCModel
 from .OldModel import ShowAttendTellModel, AllImgModel
 #from .Att2inModel import Att2inModel
 from .AttModel import *
-from .AttModel_mapping import *
-from .AttModel_et import *
-from .AttModel_dt import *
-from .AttModel_dt2 import *
-from .AttModel_mem import *
-from .AttModel_mem2 import *
-from .AttModel_mem3 import *
+#from .AttModel_mapping import *
+#from .AttModel_et import *
+#from .AttModel_dt import *
+#from .AttModel_dt2 import *
+#from .AttModel_mem import *
+#from .AttModel_mem2 import *
+#from .AttModel_mem3 import *
 from .AttModel_mem4 import *
-from .AttModel_mem5 import *
+#from .AttModel_mem5 import *
 from .SgModel import *
 from .AttModel_gfc import *
 from .AttModel_mem4_gfc import *
