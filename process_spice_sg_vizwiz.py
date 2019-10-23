@@ -2,7 +2,8 @@ import json
 import numpy as np
 import os
 
-from models.ass_fun import *
+#from models.ass_fun import *
+from ass_fun import *
 root_path = '/home/yz9244/SGAE/'
 #root_path = '/home/yangsheng/project/self-critical.pytorch/'
 train_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_train.json'
