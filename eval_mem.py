@@ -17,7 +17,7 @@ from dataloaderraw import *
 import argparse
 import misc.utils as utils
 import torch
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 # Input arguments and options
 parser = argparse.ArgumentParser()
 # Input paths
@@ -109,6 +109,8 @@ parser.add_argument('--training_mode', type=int, default=0,
                         help='training_mode')
 parser.add_argument('--memory_cell_path', type=str, default='0',
                         help='memory_cell_path')
+parser.add_argument('--output_json', type=str, default='VizWiz.json',
+                        help='memory_cell_path')
 
 opt = parser.parse_args()
 
@@ -178,4 +180,4 @@ text_file.close()
 
 if opt.dump_json == 1:
     # dump the json
-    json.dump(split_predictions, open('vis/vis.json', 'w'))
+    json.dump(split_predictions, open('vis/'+opt.output_json, 'w'))
