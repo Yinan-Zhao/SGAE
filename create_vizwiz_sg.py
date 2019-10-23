@@ -21,7 +21,7 @@ coco_train = COCO(train_path)
 coco_val = COCO(val_path)
 coco_test = COCO(test_path)
 
-coco_use = coco_val
+coco_use = coco_test
 
 image_ids = coco_use.getImgIds()
 gts = {}
