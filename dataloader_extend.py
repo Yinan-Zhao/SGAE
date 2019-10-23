@@ -54,12 +54,12 @@ class DataLoader(data.Dataset):
         self.info = json.load(open(self.opt.input_json))
 
         print('using new dict')
-        if self.opt.sg_dict_path == 'data/spice_sg_dict2.npz':
-            sg_dict_info = np.load(self.opt.sg_dict_path)['spice_dict'][()]
-            self.ix_to_word = sg_dict_info['ix_to_word']
-        else:
+        #if self.opt.sg_dict_path == 'data/spice_sg_dict2.npz':
+        sg_dict_info = np.load(self.opt.sg_dict_path)['spice_dict'][()]
+        self.ix_to_word = sg_dict_info['ix_to_word']
+        '''else:
             sg_dict_info = np.load(self.opt.sg_dict_path)['sg_dict'][()]
-            self.ix_to_word = sg_dict_info['sg_ix_to_word']
+            self.ix_to_word = sg_dict_info['sg_ix_to_word']'''
         self.vocab_size = len(self.ix_to_word)
         print('vocab size is ', self.vocab_size)
 
