@@ -138,7 +138,8 @@ for k in vars(infos['opt']).keys():
     if k != 'model':
         if k not in ignore:
             if k in vars(opt):
-                assert vars(opt)[k] == vars(infos['opt'])[k], k + ' option not consistent'
+                pass
+                #assert vars(opt)[k] == vars(infos['opt'])[k], k + ' option not consistent'
             else:
                 vars(opt).update({k: vars(infos['opt'])[k]}) # copy over options from model
 
