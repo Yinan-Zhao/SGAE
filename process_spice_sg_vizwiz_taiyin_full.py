@@ -9,14 +9,14 @@ root_path = '/home/yz9244/SGAE/'
 train_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_taiyin_train.json'
 val_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_taiyin_val.json'
 test_sg_path = root_path + 'coco-caption/pycocoevalcap/spice/sg_taiyin_test.json'
-spice_sg_folder = root_path + 'data/vizwiz_taiyin_spice_sg2/'
-spice_sg_dict_raw_path = root_path + 'data/vizwiz_taiyin_spice_sg_dict_raw2.npz'
-spice_sg_dict_path = root_path + 'data/vizwiz_taiyin_spice_sg_dict2.npz'
+spice_sg_folder = root_path + 'data/vizwiz_taiyin_full_spice_sg2/'
+spice_sg_dict_raw_path = root_path + 'data/vizwiz_taiyin_full_spice_sg_dict_raw2.npz'
+spice_sg_dict_path = root_path + 'data/vizwiz_taiyin_full_spice_sg_dict2.npz'
 
 if not os.path.isdir(spice_sg_folder):
 	os.mkdir(spice_sg_folder)
 
-dict_info = json.load(open(root_path+'data/vizwiztalk.json'))
+dict_info = json.load(open(root_path+'data/vizwiztalk_taiyin_full.json'))
 ix_to_word = dict_info['ix_to_word']
 ix_max = 0
 N_save = 10
