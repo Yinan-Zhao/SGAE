@@ -17,7 +17,6 @@ import eval_utils_mem
 import argparse
 import misc.utils as utils
 import torch
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
 # Input arguments and options
 parser = argparse.ArgumentParser()
 # Input paths
@@ -111,8 +110,11 @@ parser.add_argument('--memory_cell_path', type=str, default='0',
                         help='memory_cell_path')
 parser.add_argument('--output_json', type=str, default='VizWiz.json',
                         help='memory_cell_path')
+parser.add_argument('--gpu', type=int, default='0',
+                        help='gpu_id')
 
 opt = parser.parse_args()
+os.environ["CUDA_VISIBLE_DEVICES"]=str(opt.gpu)
 
 # Load infos
 with open(opt.infos_path) as f:
