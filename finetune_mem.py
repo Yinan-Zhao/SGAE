@@ -37,7 +37,8 @@ def load_para(model, ckpt_file, load_to_cpu=True):
         else:
             print('{} -shape {} ,{}'.format(n, (p.shape), (ip.shape))) 
             p.data[:10369].copy_(ip.data[:10369])
-            p.data[12612].copy_(ip.data[10369])
+            #p.data[12612].copy_(ip.data[10369])
+            p.data[11231].copy_(ip.data[10369])
     return model
 
 def add_summary_value(writer, key, value, iteration):
